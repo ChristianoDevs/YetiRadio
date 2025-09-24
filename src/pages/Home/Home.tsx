@@ -1,7 +1,7 @@
 import { memo, Suspense, useEffect, useRef } from "react";
 import { useBoundStore } from "../../store/store";
 import { useNavigate } from "react-router-dom";
-import { Image, TrackDetails } from "../../types/GlobalTypes";
+import { TrackDetails } from "../../types/GlobalTypes";
 import Section from "../../components/Section/Section";
 import play from "../../assets/svgs/play-icon.svg";
 import pause from "../../assets/svgs/pause-icon.svg";
@@ -95,8 +95,7 @@ const Widget = memo(
       gcTime: 1000 * 60 * 10,
     });
     const lcpImg =
-      data?.image.find((img: Image) => img.quality === "500x500")?.url ??
-      widgetfallback;
+      "https://cdn.builder.io/api/v1/image/assets%2F7fdba7c800c44f0cb37f2fe3a470643e%2F8b66ba9564f54d2a92f8a5daccf3ef4a";
 
     const handlePlaylist = (
       e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
