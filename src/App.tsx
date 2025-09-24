@@ -9,7 +9,6 @@ import "./App.css";
 import { lazy } from "react";
 
 const Layout = lazy(() => import("./pages/Layout/Layout"));
-const Intro = lazy(() => import("./pages/Intro/Intro"));
 const Home = lazy(() => import("./pages/Home/Home"));
 const Search = lazy(() => import("./pages/Search/Search"));
 const PlaylistPage = lazy(() => import("./pages/Playlist/PlaylistPage"));
@@ -27,7 +26,7 @@ export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
-        <Route index element={<Intro />} />
+        <Route index element={<Home />} />
         <Route path="/*" element={<NotFound />} />
         <Route path="/home" element={<Home />} />
         <Route path="/search" element={<Search />} />
